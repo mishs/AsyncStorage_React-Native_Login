@@ -2,6 +2,7 @@ import * as WebBrowser from 'expo-web-browser';
 import React, { Component } from 'react';
 import {
   StyleSheet,
+  Text,
   Image,
   View,
 } from 'react-native';
@@ -20,6 +21,11 @@ class HomeScreen extends Component {
                   : require('../assets/images/fluidity-image.png')
               }
             />
+            <View>
+              <Text>
+                Username
+              </Text>
+            </View>
           </View>
         </View>
       </View>
