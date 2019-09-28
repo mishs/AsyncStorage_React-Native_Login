@@ -11,7 +11,7 @@ import {
 class HomeScreen extends Component {
   render(){
     return (
-      <View style={{height: 667, backgroundColor: "#192879"}}>
+      <View style={{height: 667, backgroundColor: "#F3F3F3"}}>
         <View style={StyleSheet.mainbody}>
           <View style={styles.welcomeContainer}>
             <Image style={styles.imgLogin}
@@ -22,7 +22,7 @@ class HomeScreen extends Component {
               }
             />
             <View>
-              <Text>
+              <Text style={styles.labeluser}>
                 Username
               </Text>
             </View>
@@ -37,8 +37,7 @@ export default HomeScreen
 
 const styles = {
   mainbody: {
-    flex: 1,
-    backgroundColor: 'red',
+    flex: 1
   },
   welcomeContainer: {
     alignItems: 'center',
@@ -51,5 +50,9 @@ const styles = {
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,
+  },
+  labeluser: {
+    fontSize: 20,
+    color: "#414E93"
   }
 }
