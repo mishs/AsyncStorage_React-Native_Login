@@ -56,11 +56,11 @@ class HomeScreen extends Component {
                 value={this.state.text}
               /> */}
   {/* Username Input Area */}
-             <View style={{marginBottom: 16}}> 
+             <View style={{marginBottom: 14}}> 
                <TouchableOpacity> 
-                  <Text style={styles.labelUser}>
+                  {/* <Text style={styles.labelUser}>
                       Username
-                  </Text>
+                  </Text> */}
 
                     {/* <Button
                 title="Press me"
@@ -72,11 +72,11 @@ class HomeScreen extends Component {
               </View>
 
 {/* Password Input Area  */}
-              <View style={{marginBottom: 28}}>  
+              <View style={{marginBottom: 25}}>  
                 <TouchableOpacity>
-                  <Text style={styles.labelUser}>
+                  {/* <Text style={styles.labelUser}>
                       Password
-                  </Text>
+                  </Text> */}
                 
 
                     {/* <Button
@@ -120,33 +120,33 @@ const styles = StyleSheet.create({
   },
   welcomeContainer: {
     alignItems: 'center',
-    marginTop: 50,
+    marginTop: 30,
     marginBottom: 20,
   },
   imgLogin: {
     width: 100,
-    height: 80,
+    height: 70,
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,
   },
-  labelUser: {
-    fontSize: 20,
-    color: "#414E93",
-    marginBottom: 8,
-  },
+  // labelUser: {
+  //   fontSize: 20,
+  //   color: "#414E93",
+  //   marginBottom: 8,
+  // },
   inputUser: {
     width: 280,
-    height: 45,
+    height: 40,
     borderColor: '#435190',
     backgroundColor: "#026AA7",
     borderRadius: 8,
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'normal',
   },
   buttonContainer: {
     width: 280,
-    height: 50,
+    height: 45,
     borderRadius: 5,
     marginRight: 60,
     backgroundColor: "#40A9F3",
