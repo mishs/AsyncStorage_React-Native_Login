@@ -59,7 +59,7 @@ class HomeScreen extends Component {
           onPress={this.handleClick}
           />  */}
             
-              <TextInput style={styles.inputUser} placeholder='username' />  
+              <TextInput autoCapitalize='none' style={styles.inputUser} placeholder='username' />  
           </View>
 
 
@@ -102,8 +102,10 @@ const styles = {
   inputUser: {
     width: 280,
     height: 45,
-    borderColor: 'red',
+    borderColor: '#435190',
     backgroundColor: "#414E93",
-    borderRadius: 8
+    borderRadius: 8,
+    fontSize: 20,
+    fontWeight: 'normal',
   },
 }
