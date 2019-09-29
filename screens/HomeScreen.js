@@ -35,8 +35,19 @@ class HomeScreen extends Component {
   //   const { text } = this.state;
   //   Alert.alert(text);
   // }
+ 
+
+  // handleClick = () => {
+  //   const { text } = this.state;
+  //   Alert.alert(text);
+  // }
   detailsValidate = () => {
     const { username, password } = this.state;
+    if(username == '' && password == '') {
+      alert.alert('Please enter both details');
+    }else if(username == 'admin' && password == '1234'){
+      
+    }
     
   }
 
