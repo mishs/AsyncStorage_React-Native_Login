@@ -50,6 +50,7 @@ class HomeScreen extends Component {
                 onChangeText={(text) => this.setState({text})}
                 value={this.state.text}
               /> */}
+  {/* Username Input Area */}
              <View style={{marginBottom: 16}}>  
                 <Text style={styles.labelUser}>
                     Username
@@ -63,6 +64,7 @@ class HomeScreen extends Component {
                   <TextInput autoCapitalize='none' style={styles.inputUser} placeholder='username' />  
               </View>
 
+{/* Password Input Area  */}
               <View>  
                 <Text style={styles.labelUser}>
                     Password
@@ -73,7 +75,7 @@ class HomeScreen extends Component {
               onPress={this.handleClick}
               />  */}
                 
-                  <TextInput autoCapitalize='none' style={styles.inputUser} placeholder='username' />  
+                  <TextInput secureTextEntry={true} autoCapitalize='none' style={styles.inputUser} placeholder='password' />  
               </View>
           </View>
           
