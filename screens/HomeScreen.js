@@ -22,7 +22,9 @@ class HomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: ''
+      text: '',
+      username: '',
+      password: ''
     };
     // this.handleClick = this.handleClick.bind(this);
 
