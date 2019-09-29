@@ -1,10 +1,13 @@
 import * as WebBrowser from 'expo-web-browser';
 import React, { Component } from 'react';
 import {
+  StyleSheet,
   Text,
   TextInput,
+  TouchableOpacity,
   Image,
   View,
+  Button,
   // Alert,
   // AsyncStorage
 } from 'react-native';
@@ -51,36 +54,47 @@ class HomeScreen extends Component {
                 value={this.state.text}
               /> */}
   {/* Username Input Area */}
-             <View style={{marginBottom: 16}}>  
-                <Text style={styles.labelUser}>
-                    Username
-                </Text>
+             <View style={{marginBottom: 16}}> 
+               <TouchableOpacity> 
+                  <Text style={styles.labelUser}>
+                      Username
+                  </Text>
 
-                  {/* <Button
-              title="Press me"
-              onPress={this.handleClick}
-              />  */}
-                
-                  <TextInput autoCapitalize='none' style={styles.inputUser} placeholder='username' />  
+                    {/* <Button
+                title="Press me"
+                onPress={this.handleClick}
+                />  */}
+                  
+                    <TextInput autoCapitalize='none' style={styles.inputUser} placeholder='username' />
+                </TouchableOpacity>  
               </View>
 
 {/* Password Input Area  */}
-              <View>  
-                <Text style={styles.labelUser}>
-                    Password
-                </Text>
-
-                  {/* <Button
-              title="Press me"
-              onPress={this.handleClick}
-              />  */}
+              <View style={{marginBottom: 28}}>  
+                <TouchableOpacity>
+                  <Text style={styles.labelUser}>
+                      Password
+                  </Text>
                 
-                  <TextInput secureTextEntry={true} autoCapitalize='none' style={styles.inputUser} placeholder='password' />  
+
+                    {/* <Button
+                title="Press me"
+                onPress={this.handleClick}
+                />  */}
+                  
+                    <TextInput secureTextEntry={true} autoCapitalize='none' style={styles.inputUser} placeholder='password' />  
+                </TouchableOpacity>
               </View>
           </View>
-          
 
-
+{/* Save button */}
+          <TouchableOpacity>
+            <Button
+              title="Save"
+              color="#8392E0"
+              style={styles.btn}
+            />
+          </TouchableOpacity>
         </View>
       </View>
     )
@@ -89,7 +103,7 @@ class HomeScreen extends Component {
 
 export default HomeScreen;
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     height: 667, 
     backgroundColor: "#F3F3F3",
@@ -121,9 +135,15 @@ const styles = {
     width: 280,
     height: 45,
     borderColor: '#435190',
-    backgroundColor: "#414E93",
+    backgroundColor: "#026AA7",
     borderRadius: 8,
     fontSize: 20,
     fontWeight: 'normal',
   },
-}
+  btn: {
+    width: 280,
+    height: 50,
+    borderRadius: 5,
+    marginRight: 60,
+  },
+})
