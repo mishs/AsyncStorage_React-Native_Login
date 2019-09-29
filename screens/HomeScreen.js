@@ -50,17 +50,33 @@ class HomeScreen extends Component {
                 onChangeText={(text) => this.setState({text})}
                 value={this.state.text}
               /> */}
-             <Text style={styles.labelUser}>
-                Username
-             </Text>
+             <View style={{marginBottom: 16}}>  
+                <Text style={styles.labelUser}>
+                    Username
+                </Text>
 
-              {/* <Button
-          title="Press me"
-          onPress={this.handleClick}
-          />  */}
-            
-              <TextInput autoCapitalize='none' style={styles.inputUser} placeholder='username' />  
+                  {/* <Button
+              title="Press me"
+              onPress={this.handleClick}
+              />  */}
+                
+                  <TextInput autoCapitalize='none' style={styles.inputUser} placeholder='username' />  
+              </View>
+
+              <View>  
+                <Text style={styles.labelUser}>
+                    Password
+                </Text>
+
+                  {/* <Button
+              title="Press me"
+              onPress={this.handleClick}
+              />  */}
+                
+                  <TextInput autoCapitalize='none' style={styles.inputUser} placeholder='username' />  
+              </View>
           </View>
+          
 
 
         </View>
