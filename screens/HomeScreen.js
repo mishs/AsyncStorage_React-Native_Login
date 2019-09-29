@@ -35,6 +35,10 @@ class HomeScreen extends Component {
   //   const { text } = this.state;
   //   Alert.alert(text);
   // }
+  detailsValidate = () => {
+    const { username, password } = this.state;
+    
+  }
 
   render(){
     return (
