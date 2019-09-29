@@ -7,7 +7,8 @@ import {
   TouchableOpacity,
   Image,
   View,
-  Button,
+  KeyboardAvoidingView,
+  // Button,
   // Alert,
   // AsyncStorage
 } from 'react-native';
@@ -35,6 +36,7 @@ class HomeScreen extends Component {
 
   render(){
     return (
+    <KeyboardAvoidingView behavior='padding' style={styles.container} enabled>
       <View style={styles.container}>
         <View style={styles.mainBody}>
           <View style={styles.welcomeContainer}>
@@ -88,15 +90,17 @@ class HomeScreen extends Component {
           </View>
 
 {/* Save button */}
-          <TouchableOpacity>
-            <Button
+          <TouchableOpacity style={styles.buttonContainer}>
+            {/* <Button
               title="Save"
-              color="#8392E0"
+              color=""
               style={styles.btn}
-            />
+            /> */}
+            <Text style={styles.buttonText}>Save</Text>
           </TouchableOpacity>
         </View>
       </View>
+    </KeyboardAvoidingView>
     )
   }
 }
@@ -140,10 +144,18 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'normal',
   },
-  btn: {
+  buttonContainer: {
     width: 280,
     height: 50,
     borderRadius: 5,
     marginRight: 60,
+    backgroundColor: "#40A9F3",
+    paddingVertical: 10
   },
+  buttonText: {
+    textAlign: 'center',
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    fontSize: 20,
+  }
 })
