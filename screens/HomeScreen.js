@@ -9,7 +9,7 @@ import {
   View,
   KeyboardAvoidingView,
   // Button,
-  // Alert,
+  Alert,
   // AsyncStorage
 } from 'react-native';
 // import $ from 'jquery'; 
@@ -30,13 +30,26 @@ class HomeScreen extends Component {
 
   }
 
-
-  // handleClick = () => {
-  //   const { text } = this.state;
-  //   Alert.alert(text);
-  // }
   detailsValidate = () => {
     const { username, password } = this.state;
+    if(username == '' && password == '') {
+      Alert.alert('Please enter both details');
+    }
+    else if(username != 'admin' && password != '1234'){
+      Alert.alert('Incorrect details');
+    }
+    else if(username == 'admin' && password == ''){
+      Alert.alert('Fill in Password');
+    }
+    else if(username == '' && password == '1234'){
+      Alert.alert('Username is Empty');
+    }
+    else if(username == 'admin' && password == '1234'){
+      Alert.alert('Saved!');
+    }
+    else {
+      Alert.alert('Missing data');
+    }
     
   }
 
@@ -55,48 +68,33 @@ class HomeScreen extends Component {
             />
           </View>
           <View>
-            {/* <TextInput 
-                placeholder="Type here to translate!"
-                style={{height: 40}}
-                onChangeText={(text) => this.setState({text})}
-                value={this.state.text}
-              /> */}
-  {/* Username Input Area */}
              <View style={{marginBottom: 14}}> 
                <TouchableOpacity> 
-                  {/* <Text style={styles.labelUser}>
-                      Username
-                  </Text> */}
-
-                    {/* <Button
-                title="Press me"
-                onPress={this.handleClick}
-                />  */}
-                  
-                    <TextInput autoCapitalize='none' style={styles.inputUser} placeholder='username' />
+                    <TextInput 
+                     autoCapitalize='none' 
+                     style={styles.inputUser} 
+                     placeholder='username'
+                     onChangeText={username => this.setState({username})} 
+                     />
                 </TouchableOpacity>  
               </View>
 
 {/* Password Input Area  */}
               <View style={{marginBottom: 25}}>  
-                <TouchableOpacity>
-                  {/* <Text style={styles.labelUser}>
-                      Password
-                  </Text> */}
-                
-
-                    {/* <Button
-                title="Press me"
-                onPress={this.handleClick}
-                />  */}
-                  
-                    <TextInput secureTextEntry={true} autoCapitalize='none' style={styles.inputUser} placeholder='password' />  
+                <TouchableOpacity>                  
+                    <TextInput 
+                     secureTextEntry={true} 
+                     autoCapitalize='none' 
+                     style={styles.inputUser} 
+                     placeholder='password'
+                     onChangeText={password => this.setState({password})}
+                      />  
                 </TouchableOpacity>
               </View>
           </View>
 
 {/* Save button */}
-          <TouchableOpacity style={styles.buttonContainer}>
+          <TouchableOpacity onPress={this.detailsValidate} style={styles.buttonContainer}>
             {/* <Button
               title="Save"
               color=""
