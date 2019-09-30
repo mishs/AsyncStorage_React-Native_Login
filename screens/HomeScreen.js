@@ -95,11 +95,6 @@ class HomeScreen extends Component {
 
 {/* Save button */}
           <TouchableOpacity onPress={this.detailsValidate} style={styles.buttonContainer}>
-            {/* <Button
-              title="Save"
-              color=""
-              style={styles.btn}
-            /> */}
             <Text style={styles.buttonText}>Save</Text>
           </TouchableOpacity>
         </View>
