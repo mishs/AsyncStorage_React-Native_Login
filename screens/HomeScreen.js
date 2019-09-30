@@ -38,6 +38,12 @@ class HomeScreen extends Component {
     else if(username != 'admin' && password != '1234'){
       Alert.alert('Incorrect details');
     }
+    else if(username == 'admin' && password == ''){
+      Alert.alert('Fill in Password');
+    }
+    else if(username == '' && password == '1234'){
+      Alert.alert('Username is Empty');
+    }
     else if(username == 'admin' && password == '1234'){
       Alert.alert('Saved!');
     }
