@@ -57,42 +57,27 @@ class HomeScreen extends Component {
             />
           </View>
           <View>
-            {/* <TextInput 
-                placeholder="Type here to translate!"
-                style={{height: 40}}
-                onChangeText={(text) => this.setState({text})}
-                value={this.state.text}
-              /> */}
-  {/* Username Input Area */}
              <View style={{marginBottom: 14}}> 
                <TouchableOpacity> 
-                  {/* <Text style={styles.labelUser}>
-                      Username
-                  </Text> */}
-
-                    {/* <Button
-                title="Press me"
-                onPress={this.handleClick}
-                />  */}
-                  
-                    <TextInput autoCapitalize='none' style={styles.inputUser} placeholder='username' />
+                    <TextInput 
+                     autoCapitalize='none' 
+                     style={styles.inputUser} 
+                     placeholder='username'
+                     onChangeText={username => this.setState({username})} 
+                     />
                 </TouchableOpacity>  
               </View>
 
 {/* Password Input Area  */}
               <View style={{marginBottom: 25}}>  
-                <TouchableOpacity>
-                  {/* <Text style={styles.labelUser}>
-                      Password
-                  </Text> */}
-                
-
-                    {/* <Button
-                title="Press me"
-                onPress={this.handleClick}
-                />  */}
-                  
-                    <TextInput secureTextEntry={true} autoCapitalize='none' style={styles.inputUser} placeholder='password' />  
+                <TouchableOpacity>                  
+                    <TextInput 
+                     secureTextEntry={true} 
+                     autoCapitalize='none' 
+                     style={styles.inputUser} 
+                     placeholder='password'
+                     onChangeText={password => this.setState({password})}
+                      />  
                 </TouchableOpacity>
               </View>
           </View>
