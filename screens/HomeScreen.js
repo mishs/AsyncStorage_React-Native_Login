@@ -9,7 +9,7 @@ import {
   View,
   KeyboardAvoidingView,
   // Button,
-  // Alert,
+  Alert,
   // AsyncStorage
 } from 'react-native';
 // import $ from 'jquery'; 
@@ -33,11 +33,11 @@ class HomeScreen extends Component {
   detailsValidate = () => {
     const { username, password } = this.state;
     if(username == '' && password == '') {
-      alert.alert('Please enter both details');
+      Alert.alert('Please enter both details');
     }else if(username == 'admin' && password == '1234'){
-      alert.alert('Saved!');
+      Alert.alert('Saved!');
     }else {
-      alert.alert('Missing data');
+      Alert.alert('Missing data');
     }
     
   }
