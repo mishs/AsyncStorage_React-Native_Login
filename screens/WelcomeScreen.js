@@ -5,7 +5,7 @@ export default function WelcomeScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text>Welcome to Screen 2</Text>
-      <TouchableOpacity onPress={this.detailsValidate} style={styles.buttonContainer}>
+      <TouchableOpacity onPress={this.nextScreen} style={styles.buttonContainer}>
             <Text style={styles.buttonText}>Click Button to Visit Screen 3</Text>
           </TouchableOpacity>
     </ScrollView>
@@ -21,6 +21,14 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 15,
     backgroundColor: 'red',
+  },
+  buttonContainer: {
+    width: 280,
+    height: 45,
+    borderRadius: 5,
+    marginRight: 60,
+    backgroundColor: "#40A9F3",
+    paddingVertical: 10
   },
   buttonText: {
     textAlign: 'center',
