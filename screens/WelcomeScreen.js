@@ -5,7 +5,7 @@ export default function WelcomeScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text>Welcome to Screen 2</Text>
-      <TouchableOpacity onPress={this.nextScreen} style={styles.buttonContainer}>
+      <TouchableOpacity onPress={this.detailsValidate} style={styles.buttonContainer}>
             <Text style={styles.buttonText}>Click Button to Visit Screen 3</Text>
           </TouchableOpacity>
     </ScrollView>
