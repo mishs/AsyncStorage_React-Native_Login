@@ -34,9 +34,14 @@ class HomeScreen extends Component {
     const { username, password } = this.state;
     if(username == '' && password == '') {
       Alert.alert('Please enter both details');
-    }else if(username == 'admin' && password == '1234'){
+    }
+    else if(username != 'admin' && password != '1234'){
+      Alert.alert('Incorrect details');
+    }
+    else if(username == 'admin' && password == '1234'){
       Alert.alert('Saved!');
-    }else {
+    }
+    else {
       Alert.alert('Missing data');
     }
     
