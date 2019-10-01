@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-export default function SettingsScreen() {
+export default function Screen3() {
   return (
     <ScrollView style={styles.container}>
     <Text>Welcome to Screen 3</Text>
@@ -12,8 +12,8 @@ export default function SettingsScreen() {
 );
 }
 
-SettingsScreen.navigationOptions = {
-  title: 'Screen 3',
+Screen2.navigationOptions = {
+  title: 'Screen2',
 };
 
 const styles = StyleSheet.create({
