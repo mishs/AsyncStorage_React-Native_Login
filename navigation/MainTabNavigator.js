@@ -5,7 +5,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import Screen2 from '../screens/Screen2';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -53,7 +53,7 @@ LinksStack.path = '';
 
 const SettingsStack = createStackNavigator(
   {
-    Settings: SettingsScreen,
+    Settings: Screen2,
   },
   config
 );
